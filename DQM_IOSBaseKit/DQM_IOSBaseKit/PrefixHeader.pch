@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  DQM_IOSBaseKit
+//
+//  Created by 漂读网 on 2019/1/5.
+//  Copyright © 2019 漂读网. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "dqmBasePrefix.pch"
+
+
+#endif /* PrefixHeader_pch */
