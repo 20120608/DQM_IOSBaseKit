@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "IQKeyboardManager.h"
+#import "YYFPSLabel.h"
+#import "DQMTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  
+  /*配置键盘*/
+  IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+  manager.enable = YES;//    控制整个功能是否启用。
+  manager.overrideKeyboardAppearance = YES;
+  manager.shouldResignOnTouchOutside = YES;//控制点击背景是否收起键盘
+  manager.enableAutoToolbar = YES;//控制是否显示键盘上的工具条。
+  manager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
+  manager.toolbarDoneBarButtonItemText = @"完成";// 将英文done换成中文
+  
+  self.window.rootViewController = [[DQMTabBarController alloc] init];
+  [self.window makeKeyAndVisible];
+  
+  [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(61, STATUS_BAR_HEIGHT, 0, 0)]];
+  
+  
   return YES;
 }
 

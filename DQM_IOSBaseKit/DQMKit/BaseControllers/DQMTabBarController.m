@@ -62,17 +62,29 @@
   [self.childViewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
     
     obj.tabBarItem.title = tabBarItemsAttributes[idx][@"TabBarItemTitle"];
-    obj.tabBarItem.image = [UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemImage"]];
-    obj.tabBarItem.selectedImage = [UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemSelectedImage"]];
-    obj.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -3);
+    obj.tabBarItem.image = [[self scaleImageToSize:[UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemImage"]] size:CGSizeMake(28, 28)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    obj.tabBarItem.selectedImage = [[self scaleImageToSize:[UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemSelectedImage"]] size:CGSizeMake(28, 28)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //    obj.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, 0);
+    //    obj.tabBarItem.imageInsets = UIEdgeInsetsMake(0,0,0,0);
   }];
   
-  self.tabBar.tintColor = [UIColor redColor];
+  self.tabBar.tintColor = DQMMainColor;
 }
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
   return YES;
 }
+
+-(UIImage *)scaleImageToSize:(UIImage *)image size:(CGSize)newSize
+{
+  UIGraphicsBeginImageContextWithOptions(newSize, NO, 3.0);
+  //UIGraphicsBeginImageContext(newSize);//用这个会模糊
+  [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];//根据新的尺寸画出传过来的图片
+  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();//从当前环境当中得到重绘的图片
+  UIGraphicsEndImageContext();//关闭当前环境
+  return newImage;
+}
+
 
 @end
