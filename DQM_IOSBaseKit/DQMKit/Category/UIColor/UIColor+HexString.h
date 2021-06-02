@@ -1,11 +1,3 @@
-//
-//  UIColor+HexString.h
-//  DQM_ReaderBooks
-//
-//  Created by 漂读网 on 2019/1/4.
-//  Copyright © 2019 漂读网. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 #define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:A]
