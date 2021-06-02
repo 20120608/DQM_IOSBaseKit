@@ -10,6 +10,9 @@
 #import "IQKeyboardManager.h"
 #import "YYFPSLabel.h"
 #import "DQMTabBarController.h"
+#import "DQMNavigationController.h"
+#import "DQMBaseViewController.h"
+#import "FirstViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +32,8 @@
   manager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
   manager.toolbarDoneBarButtonItemText = @"完成";// 将英文done换成中文
   
-  self.window.rootViewController = [[DQMTabBarController alloc] init];
+    DQMNavigationController *one = [[DQMNavigationController alloc] initWithRootViewController:[[FirstViewController alloc] initWithTitle:@""]];
+    self.window.rootViewController =  one;//[[DQMTabBarController alloc] init];
   [self.window makeKeyAndVisible];
   
   [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(61, STATUS_BAR_HEIGHT, 0, 0)]];

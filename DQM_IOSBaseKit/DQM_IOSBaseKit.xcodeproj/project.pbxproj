@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,9 @@
 		597FDA6721E0AE2D00E2BF99 /* QMSGeneralHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FDA4521E0AE2D00E2BF99 /* QMSGeneralHelpers.m */; };
 		597FDA6821E0AE2D00E2BF99 /* DQMConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FDA4621E0AE2D00E2BF99 /* DQMConst.m */; };
 		597FDA6B21E0AF8000E2BF99 /* HELP.md in Resources */ = {isa = PBXBuildFile; fileRef = 597FDA6A21E0AF8000E2BF99 /* HELP.md */; };
+		F81103A12667DD9500D34212 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81103A02667DD9500D34212 /* SecondViewController.m */; };
+		F81103A42667DDAF00D34212 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81103A32667DDAF00D34212 /* FirstViewController.m */; };
+		F81103A72667E21C00D34212 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81103A62667E21C00D34212 /* ThreeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +162,12 @@
 		597FDA6921E0AE5000E2BF99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		597FDA6A21E0AF8000E2BF99 /* HELP.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = HELP.md; sourceTree = "<group>"; };
 		8525D38A8D550B144194016C /* Pods-DQM_IOSBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQM_IOSBaseKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DQM_IOSBaseKit/Pods-DQM_IOSBaseKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F811039F2667DD9500D34212 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F81103A02667DD9500D34212 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F81103A22667DDAF00D34212 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		F81103A32667DDAF00D34212 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F81103A52667E21C00D34212 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		F81103A62667E21C00D34212 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		F953D25360A25BB5C94C93B5 /* Pods-DQM_IOSBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQM_IOSBaseKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DQM_IOSBaseKit/Pods-DQM_IOSBaseKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +258,7 @@
 		597FD9F621E0AE2D00E2BF99 /* DQMKit */ = {
 			isa = PBXGroup;
 			children = (
+				F811039E2667DD5A00D34212 /* zuoye */,
 				597FDA6A21E0AF8000E2BF99 /* HELP.md */,
 				597FDA2521E0AE2D00E2BF99 /* dqmBasePrefix.pch */,
 				597FD9F721E0AE2D00E2BF99 /* DqmBaseAssets.xcassets */,
@@ -435,6 +445,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F811039E2667DD5A00D34212 /* zuoye */ = {
+			isa = PBXGroup;
+			children = (
+				F81103A22667DDAF00D34212 /* FirstViewController.h */,
+				F81103A32667DDAF00D34212 /* FirstViewController.m */,
+				F811039F2667DD9500D34212 /* SecondViewController.h */,
+				F81103A02667DD9500D34212 /* SecondViewController.m */,
+				F81103A52667E21C00D34212 /* ThreeViewController.h */,
+				F81103A62667E21C00D34212 /* ThreeViewController.m */,
+			);
+			path = zuoye;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,6 +634,7 @@
 				597FDA5621E0AE2D00E2BF99 /* DQMNavigationController.m in Sources */,
 				597FDA5F21E0AE2D00E2BF99 /* DQMNavigationBar.m in Sources */,
 				597FDA6521E0AE2D00E2BF99 /* YYFPSLabel.m in Sources */,
+				F81103A12667DD9500D34212 /* SecondViewController.m in Sources */,
 				597FDA4A21E0AE2D00E2BF99 /* UIColor+HexString.m in Sources */,
 				597FDA4921E0AE2D00E2BF99 /* UIButton+DQM.m in Sources */,
 				597FDA5C21E0AE2D00E2BF99 /* DQMGroup.m in Sources */,
@@ -621,6 +645,7 @@
 				597FDA4821E0AE2D00E2BF99 /* UIWindow+CurrentViewController.m in Sources */,
 				597FDA5221E0AE2D00E2BF99 /* DQMStaticTableViewController.m in Sources */,
 				597FDA6721E0AE2D00E2BF99 /* QMSGeneralHelpers.m in Sources */,
+				F81103A72667E21C00D34212 /* ThreeViewController.m in Sources */,
 				597FDA6821E0AE2D00E2BF99 /* DQMConst.m in Sources */,
 				597FDA6621E0AE2D00E2BF99 /* JXTAlertController.m in Sources */,
 				597FDA6121E0AE2D00E2BF99 /* DQMLabelSizeToFitTableViewCell.m in Sources */,
@@ -629,6 +654,7 @@
 				597FDA5521E0AE2D00E2BF99 /* DQMFoldingTableViewController.m in Sources */,
 				597FDA5321E0AE2D00E2BF99 /* DQMRequestBaseViewController.m in Sources */,
 				597FDA6321E0AE2D00E2BF99 /* DQMAutoRefreshFooter.m in Sources */,
+				F81103A42667DDAF00D34212 /* FirstViewController.m in Sources */,
 				597FDA5921E0AE2D00E2BF99 /* DQMTableViewController.m in Sources */,
 				597FD9C921E0ADC800E2BF99 /* ViewController.m in Sources */,
 				597FDA5021E0AE2D00E2BF99 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

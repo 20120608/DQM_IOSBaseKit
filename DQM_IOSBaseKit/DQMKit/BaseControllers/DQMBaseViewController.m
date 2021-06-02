@@ -12,15 +12,14 @@
 @interface DQMBaseViewController ()
 
 
-
 @end
 
 @implementation DQMBaseViewController
 
-
 #pragma mark - 生命周期
 - (void)viewDidLoad {
   [super viewDidLoad];
+    self.dqm_navgationBar.hidden = YES;
   self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
   self.automaticallyAdjustsScrollViewInsets = NO;
   static dispatch_once_t onceToken;
@@ -30,12 +29,14 @@
       [[UIScrollView appearanceWhenContainedInInstancesOfClasses:@[[DQMBaseViewController class]]] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
   });
-  
-  /*
-   *例如： 使UIView上面的UIButton的titleColor都变成灰色
-   *[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class]]] setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-   */
 }
+
+
+-(void)action {
+    
+}
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
